@@ -98,10 +98,15 @@ This is the nuance worth knowing up front: the GitHub connector available in reg
 
 1. **Create an empty repository first.** Go to [github.com/new](https://github.com/new), give it a name, choose **Public** or **Private** (see guidance above), and click **Create repository**. Leave it empty — don't add a README yet.
 2. **Go to [claude.ai/code](https://claude.ai/code)** (or the **Code** tab in the Claude mobile app) and sign in.
-3. When prompted, **connect your GitHub account** — this installs the "Claude" GitHub App and asks which repositories to grant it access to. Select the one you just created (or all repos, if you'll use this often).
-4. **Pick that repository** from the repository selector.
-5. Type what you want done — e.g. *"Set up this repo with a README, a /diagrams folder, and an MIT license"* — and press enter.
-6. Claude works in an isolated cloud environment (nothing runs on your computer), then pushes a branch and opens a pull request for you to review.
+3. When prompted to connect GitHub, you'll land on an install screen. **If you ever need to do this manually instead, go directly to [github.com/apps/claude](https://github.com/apps/claude) — don't search for "Claude" in GitHub's Marketplace.** The Marketplace search returns dozens of unrelated third-party tools that happen to have "Claude" in their name (code review bots, CI actions, etc.) — none of those are the one that lets Claude Code read and write your repo. `github.com/apps/claude` is the one official app for this.
+4. On that install screen: choose which account or organization owns your repo, select **"Only select repositories"**, and pick the one you just created. Confirm the permissions shown include **"Read and write access to actions, checks, code, discussions, issues, pull requests, repository hooks, and workflows"** — that's the correct, expected set. Click **Install & Authorize**.
+5. **Pick that repository** from the repository selector back in Claude.
+6. Type what you want done — e.g. *"Set up this repo with a README, a /diagrams folder, and an MIT license"* — and press enter.
+7. Claude works in an isolated cloud environment (nothing runs on your computer), then pushes a branch and opens a pull request for you to review.
+
+**If you're not the owner of the GitHub organization your repo lives in,** you won't be able to complete the install yourself — and the error you'll hit won't necessarily say that clearly. Instead of guessing, go to your Claude **Organization settings → Claude Code → GitHub**. If the connection isn't set up yet, that page has a "Not a GitHub account owner?" section with a ready-made message and direct link to send to whoever *is* the GitHub org owner — they'll also need to be an admin on your Claude workspace. This is a common real-world situation (the person setting up Claude tooling often isn't the same person with GitHub org-owner rights), so don't assume something's broken if you land here — it's just a different, equally normal path.
+
+**To check whether the connection actually worked,** go back to that same **Organization settings → Claude Code → GitHub** page. A successful install shows your organization listed under "Installations" with a status of **Active** and a "Synced from GitHub" timestamp — that's your confirmation, independent of whatever you see on GitHub's side.
 
 **If you have the Claude Desktop app installed, there's a second door to the same room — worth knowing so you don't get tripped up.** Desktop has its own **Code** tab, and clicking it also gets you Claude Code. When you click the environment selector (it starts on **Local**), you'll see several options in the menu — this is the part worth reading carefully, because two of them sound similar but do very different things:
 
@@ -130,6 +135,8 @@ A simple loop that works well:
 5. **Log what you find.** If Chat flags something, add it as a comment on the PR or the Linear issue — not just in the chat window — so the next person (or the next session) has the paper trail, not just your memory of the conversation.
 
 This isn't about distrusting Claude Code specifically — it's the same discipline you'd want between any two collaborators, human or AI, where one writes a spec and another implements it. The point of connecting Chat, Code, Linear, and GitHub together isn't to remove the review step; it's to make that review fast and grounded in a real record, instead of scattered across screenshots and memory.
+
+**Do you need a pull request for every change?** Not always — for a solo first commit into an otherwise empty repo, pushing straight to the main branch is perfectly reasonable; there's no one else's work to conflict with and nothing live depending on it yet. But it's worth defaulting back to PRs once there's ongoing work: the Linear↔GitHub automation described above (an issue ID mentioned in a PR moving that issue to "In Progress" or "Done" automatically) is specifically PR-driven. Skipping PRs as a habit means losing that automation, not just skipping a formality.
 
 ## Understanding Linear (for non-technical readers)
 
