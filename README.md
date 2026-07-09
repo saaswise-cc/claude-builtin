@@ -24,7 +24,11 @@ Prefer to read the full walkthrough yourself, at your own pace, instead? Everyth
 - **If it has a goal, a deadline, and more than one moving part, it's already a project.** The only question is whether Claude knows about it yet.
 - **This isn't for everything.** If the work is simple and short-lived, a doc or a Notion page is still the right call. This is for work that recurs and accumulates decisions over time.
 
-See `/deck` for the full pitch deck and `/diagrams` for the visual walkthrough this argument is built on.
+Here's what that looks like as a real example, not just an abstraction:
+
+![One ordinary project, walked end to end](diagrams/diagram3.png)
+
+See `/deck` for the full pitch deck and `/diagrams` for the rest of the visual walkthrough this argument is built on.
 
 ## What's in this repo
 
