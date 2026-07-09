@@ -19,7 +19,7 @@ See `/deck` for the full pitch deck and `/diagrams` for the visual walkthrough t
 ```
 /README.md         — this file
 /diagrams           — the four diagrams behind the pitch (SVG)
-/deck                — the full pitch deck
+/deck                — the full pitch deck (.pptx source, plus a .pdf for viewing directly in GitHub)
 /db/schema.sql   — the Neon schema used by this project's own engagement tracking
 /LICENSE            — MIT
 ```
