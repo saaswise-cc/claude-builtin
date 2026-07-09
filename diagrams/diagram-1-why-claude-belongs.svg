@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 925 922" width="925" height="922">
+<rect x="0" y="0" width="925" height="922" fill="#ffffff"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="context-stroke" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<ellipse cx="470.0" cy="480.0" rx="100.0" ry="100.0" fill="#d0bfff" stroke="#8b5cf6" stroke-width="2"/>
+<text x="470.0" y="480.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="28" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">Claude</text>
+<rect x="340.0" y="125.0" width="260.0" height="110.0" rx="12" ry="12" fill="#c3fae8" stroke="#0f9488" stroke-width="1.5"/>
+<text x="470.0" y="157.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#0f9488" text-anchor="middle" dominant-baseline="middle">Keeps the plan on track</text>
+<text x="470.0" y="180.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#0f9488" text-anchor="middle" dominant-baseline="middle">so nothing falls</text>
+<text x="470.0" y="203.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#0f9488" text-anchor="middle" dominant-baseline="middle">through the cracks</text>
+<rect x="625.0" y="332.0" width="260.0" height="110.0" rx="12" ry="12" fill="#ffd8a8" stroke="#c2620a" stroke-width="1.5"/>
+<text x="755.0" y="364.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">Does the actual work</text>
+<text x="755.0" y="387.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">writes the docs, files,</text>
+<text x="755.0" y="410.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">and updates</text>
+<rect x="516.0" y="668.0" width="260.0" height="110.0" rx="12" ry="12" fill="#a5d8ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="646.0" y="700.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#2563eb" text-anchor="middle" dominant-baseline="middle">Remembers what happened</text>
+<text x="646.0" y="723.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#2563eb" text-anchor="middle" dominant-baseline="middle">keeps history when it</text>
+<text x="646.0" y="746.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#2563eb" text-anchor="middle" dominant-baseline="middle">matters</text>
+<rect x="164.0" y="668.0" width="260.0" height="110.0" rx="12" ry="12" fill="#eebefa" stroke="#a21caf" stroke-width="1.5"/>
+<text x="294.0" y="688.4" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#a21caf" text-anchor="middle" dominant-baseline="middle">Anyone can jump in,</text>
+<text x="294.0" y="711.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#a21caf" text-anchor="middle" dominant-baseline="middle">anytime</text>
+<text x="294.0" y="734.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#a21caf" text-anchor="middle" dominant-baseline="middle">no special access</text>
+<text x="294.0" y="757.6" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#a21caf" text-anchor="middle" dominant-baseline="middle">needed</text>
+<rect x="55.0" y="332.0" width="260.0" height="110.0" rx="12" ry="12" fill="#fff3bf" stroke="#92722a" stroke-width="1.5"/>
+<text x="185.0" y="352.4" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#92722a" text-anchor="middle" dominant-baseline="middle">Humans stay in the loop</text>
+<text x="185.0" y="375.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#92722a" text-anchor="middle" dominant-baseline="middle">steering,</text>
+<text x="185.0" y="398.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#92722a" text-anchor="middle" dominant-baseline="middle">double-checking,</text>
+<text x="185.0" y="421.6" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#92722a" text-anchor="middle" dominant-baseline="middle">catching mistakes</text>
+<line x1="470.0" y1="380.0" x2="470.0" y2="235.0" stroke="#8b5cf6" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<line x1="565.0" y1="449.0" x2="703.0" y2="404.0" stroke="#8b5cf6" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<line x1="529.0" y1="561.0" x2="614.0" y2="679.0" stroke="#8b5cf6" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<line x1="411.0" y1="561.0" x2="326.0" y2="679.0" stroke="#8b5cf6" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<line x1="375.0" y1="449.0" x2="237.0" y2="404.0" stroke="#8b5cf6" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="40.0" y="65.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="30" fill="#1e1e1e" text-anchor="start">Every project deserves a Claude built in</text>
+<text x="40.0" y="105.3" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#757575" text-anchor="start">Not just for engineers — for any initiative in the company</text>
+<text x="40.0" y="847.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="20" fill="#1e1e1e" text-anchor="start">If Claude isn't part of the project, the project is</text>
+<text x="40.0" y="872.6" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="20" fill="#1e1e1e" text-anchor="start">working harder than it needs to.</text>
+</svg>

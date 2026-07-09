@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1230 671" width="1230" height="671">
+<rect x="0" y="0" width="1230" height="671" fill="#ffffff"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="context-stroke" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="40.0" y="180.0" width="1150.0" height="300.0" rx="12" ry="12" fill="transparent" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="8,6"/>
+<rect x="455.0" y="145.0" width="110.0" height="26.0" rx="12" ry="12" fill="#f1f0f4" stroke="#a0a0a0" stroke-width="1.5"/>
+<text x="510.0" y="158.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="12" fill="#a0a0a0" text-anchor="middle" dominant-baseline="middle">Q1 ✓ closed</text>
+<rect x="580.0" y="145.0" width="110.0" height="26.0" rx="12" ry="12" fill="#f1f0f4" stroke="#a0a0a0" stroke-width="1.5"/>
+<text x="635.0" y="158.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="12" fill="#a0a0a0" text-anchor="middle" dominant-baseline="middle">Q2 ✓ closed</text>
+<rect x="705.0" y="145.0" width="110.0" height="26.0" rx="12" ry="12" fill="#d0bfff" stroke="#8b5cf6" stroke-width="2"/>
+<text x="760.0" y="150.3" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="12" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">Q3 — this</text>
+<text x="760.0" y="165.7" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="12" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">one</text>
+<rect x="830.0" y="145.0" width="110.0" height="26.0" rx="12" ry="12" fill="transparent" stroke="#a0a0a0" stroke-width="1.5" stroke-dasharray="8,6"/>
+<text x="885.0" y="158.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="12" fill="#a0a0a0" text-anchor="middle" dominant-baseline="middle">Q4 next</text>
+<ellipse cx="180.0" cy="205.0" rx="15.0" ry="15.0" fill="#d0bfff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="180.0" y="205.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="16" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">1</text>
+<rect x="55.0" y="230.0" width="200.0" height="70.0" rx="12" ry="12" fill="#d0bfff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="155.0" y="255.4" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="15" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">"Plan the Q3</text>
+<text x="155.0" y="274.6" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="15" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">offsite"</text>
+<rect x="55.0" y="315.0" width="200.0" height="45.0" rx="12" ry="12" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="155.0" y="337.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">Book venue</text>
+<rect x="55.0" y="370.0" width="200.0" height="45.0" rx="12" ry="12" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="155.0" y="392.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">Approve budget</text>
+<rect x="55.0" y="425.0" width="200.0" height="45.0" rx="12" ry="12" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="155.0" y="447.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">Track RSVPs</text>
+<ellipse cx="480.0" cy="205.0" rx="15.0" ry="15.0" fill="#ffd8a8" stroke="#c2620a" stroke-width="1.5"/>
+<text x="480.0" y="205.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="16" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">2</text>
+<rect x="355.0" y="230.0" width="200.0" height="70.0" rx="12" ry="12" fill="#ffd8a8" stroke="#c2620a" stroke-width="1.5"/>
+<text x="455.0" y="255.4" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="15" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">Claude code does the</text>
+<text x="455.0" y="274.6" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="15" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">legwork</text>
+<rect x="355.0" y="315.0" width="200.0" height="45.0" rx="12" ry="12" fill="#fff1e0" stroke="#c2620a" stroke-width="1.5"/>
+<text x="455.0" y="337.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">venue-comparison.md</text>
+<rect x="355.0" y="370.0" width="200.0" height="45.0" rx="12" ry="12" fill="#fff1e0" stroke="#c2620a" stroke-width="1.5"/>
+<text x="455.0" y="384.2" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">budget-sheet.xlsx</text>
+<text x="455.0" y="400.8" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">v1→v2→v3</text>
+<rect x="355.0" y="425.0" width="200.0" height="45.0" rx="12" ry="12" fill="#fff1e0" stroke="#c2620a" stroke-width="1.5"/>
+<text x="455.0" y="447.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#c2620a" text-anchor="middle" dominant-baseline="middle">invite-draft.md</text>
+<ellipse cx="780.0" cy="205.0" rx="15.0" ry="15.0" fill="#b2f2bb" stroke="#15803d" stroke-width="1.5"/>
+<text x="780.0" y="205.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="16" fill="#15803d" text-anchor="middle" dominant-baseline="middle">3</text>
+<rect x="655.0" y="230.0" width="200.0" height="70.0" rx="12" ry="12" fill="#b2f2bb" stroke="#15803d" stroke-width="1.5"/>
+<text x="755.0" y="255.4" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="15" fill="#15803d" text-anchor="middle" dominant-baseline="middle">The numbers stay</text>
+<text x="755.0" y="274.6" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="15" fill="#15803d" text-anchor="middle" dominant-baseline="middle">current</text>
+<rect x="655.0" y="315.0" width="200.0" height="45.0" rx="12" ry="12" fill="#e6f9e9" stroke="#15803d" stroke-width="1.5"/>
+<text x="755.0" y="337.5" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#15803d" text-anchor="middle" dominant-baseline="middle">RSVPs: 12 → 28 → 42</text>
+<rect x="655.0" y="370.0" width="200.0" height="45.0" rx="12" ry="12" fill="#e6f9e9" stroke="#15803d" stroke-width="1.5"/>
+<text x="755.0" y="384.2" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#15803d" text-anchor="middle" dominant-baseline="middle">Budget: $15,000 →</text>
+<text x="755.0" y="400.8" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#15803d" text-anchor="middle" dominant-baseline="middle">$18,400</text>
+<ellipse cx="1080.0" cy="205.0" rx="15.0" ry="15.0" fill="#d0bfff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="1080.0" y="205.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="16" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">4</text>
+<rect x="955.0" y="230.0" width="200.0" height="150.0" rx="12" ry="12" fill="#d0bfff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="1055.0" y="233.3" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">Ask anytime, get the</text>
+<text x="1055.0" y="251.2" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">real answer</text>
+<text x="1055.0" y="269.2" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle"></text>
+<text x="1055.0" y="287.1" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">"Where's the offsite</text>
+<text x="1055.0" y="305.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">at?"</text>
+<text x="1055.0" y="322.9" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">Status across every</text>
+<text x="1055.0" y="340.8" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">issue,</text>
+<text x="1055.0" y="358.8" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">file, and number —</text>
+<text x="1055.0" y="376.7" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">instantly</text>
+<rect x="55.0" y="490.0" width="1100.0" height="100.0" rx="12" ry="12" fill="#fff3bf" stroke="#92722a" stroke-width="1.5"/>
+<text x="605.0" y="527.8" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="19" fill="#92722a" text-anchor="middle" dominant-baseline="middle">If it has a goal, a deadline, and more than one moving part —</text>
+<text x="605.0" y="552.2" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="19" fill="#92722a" text-anchor="middle" dominant-baseline="middle">it's already a project. The only question is whether Claude knows about it yet.</text>
+<line x1="155.0" y1="300.0" x2="155.0" y2="315.0" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="155.0" y1="360.0" x2="155.0" y2="370.0" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="155.0" y1="415.0" x2="155.0" y2="425.0" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="455.0" y1="300.0" x2="455.0" y2="315.0" stroke="#c2620a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="455.0" y1="360.0" x2="455.0" y2="370.0" stroke="#c2620a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="455.0" y1="415.0" x2="455.0" y2="425.0" stroke="#c2620a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="755.0" y1="300.0" x2="755.0" y2="315.0" stroke="#15803d" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="755.0" y1="360.0" x2="755.0" y2="370.0" stroke="#15803d" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="255.0" y1="265.0" x2="355.0" y2="265.0" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="305.0" y="253.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle" dominant-baseline="middle">via Linear</text>
+<line x1="555.0" y1="265.0" x2="655.0" y2="265.0" stroke="#c2620a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="605.0" y="253.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle" dominant-baseline="middle">via git</text>
+<line x1="855.0" y1="265.0" x2="955.0" y2="305.0" stroke="#15803d" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="905.0" y="273.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle" dominant-baseline="middle">via DB</text>
+<text x="75.0" y="62.1" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="26" fill="#1e1e1e" text-anchor="start">One ordinary project, walked end to end</text>
+<text x="75.0" y="100.3" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="18" fill="#757575" text-anchor="start">Planning the Q3 team offsite — not a line of code in sight</text>
+<text x="50.0" y="121.0" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="13" fill="#6d28d9" text-anchor="start">OFFSITES — ONE TEAM, ONE REPO, ONE DATABASE, EVERY QUARTER</text>
+<text x="55.0" y="623.6" font-family="Excalifont, 'Comic Sans MS', 'Segoe Print', cursive, sans-serif" font-size="16" fill="#757575" text-anchor="start">All of this runs through MCPs and CLIs you already have — no special setup.</text>
+</svg>
