@@ -1,0 +1,182 @@
+# Claude, Built In
+
+**Most projects only ever give Claude a chat window. This is a starter kit for giving it a home instead — a place to keep the plan, a place to do the work, and a place to remember what happened.**
+
+Connected that way, Claude can keep a plan on track, do the actual work (docs, files, updates), and hold a live record of what happened — all through tools you can set up for free, in about the time it takes to read this page.
+
+This repo is itself the working example: the [Linear project](https://linear.app) tracking this kit's own build-out, this GitHub repo, and a Neon database are the real thing, not a mockup.
+
+## The pitch, in short
+
+- **Chat and Code were never meant to work alone.** Both can reach a project's plan, its files, and its data — through connectors and CLIs most people already have access to, not special setup.
+- **If it has a goal, a deadline, and more than one moving part, it's already a project.** The only question is whether Claude knows about it yet.
+- **This isn't for everything.** If the work is simple and short-lived, a doc or a Notion page is still the right call. This is for work that recurs and accumulates decisions over time.
+
+See `/deck` for the full pitch deck and `/diagrams` for the visual walkthrough this argument is built on.
+
+## What's in this repo
+
+```
+/README.md         — this file
+/diagrams           — the four diagrams behind the pitch (SVG)
+/deck                — the full pitch deck
+/db/schema.sql   — the Neon schema used by this project's own engagement tracking
+/LICENSE            — MIT
+```
+
+---
+
+## Getting Started
+
+You don't need to know how to code to follow this. You don't even need to have used Claude, GitHub, Linear, or a database before — this section assumes you haven't.
+
+The short version of what you're building: instead of Claude living only in a chat window, you're giving it a **place to keep the plan** (Linear), **a place to do the work** (GitHub), and **a place to remember what happened** (a database, via Neon). Once those three exist, Claude can read and write to all of them directly — so a plan doesn't drift out of sync with the work, and the work doesn't drift out of sync with the record.
+
+That means four accounts, created in this order:
+
+### 1. Claude — the assistant that does the work
+
+Claude is Anthropic's AI assistant. In this setup, Claude is the one actually writing the docs, filing the issues, and keeping things updated — not just answering questions in a chat window.
+
+👉 **Sign up at [claude.ai](https://claude.ai)** (free to start).
+
+### 2. GitHub — where the code, diagrams, and history live
+
+GitHub hosts this project's code, diagrams, and a full history of every change anyone's ever made to it. If you've never used it, think of it as a shared, permanent, undoable-by-nobody filing cabinet.
+
+👉 **Sign up at [github.com/signup](https://github.com/signup)** — free, and covers everything here. GitHub's free plan includes unlimited repositories either way, so "public" vs "private" is a choice you make per-repo, not a paid feature.
+
+**Public or private — which should you pick?**
+
+This starter kit itself is public: the whole point is for strangers to be able to read it, fork it, and learn from it. But if you're using this same framework (Claude + GitHub + Linear + Neon) for your own project — a client's work, something with real user data, anything not meant for strangers — make the repo **private** instead. You can do this at creation time, or flip an existing repo's visibility later from **Settings → General → Danger Zone → Change visibility** in GitHub.
+
+A rough rule: if you'd be comfortable with a stranger reading every file and every commit message, public is fine. If there's anything in there you wouldn't want a competitor, a client, or the internet at large to see — company names, credentials, internal numbers, unreleased plans — keep it private.
+
+### 3. Linear — where the plan lives
+
+Linear holds the project overview and the list of things left to do (called "issues"). It's the answer to "what are we working on and what's left" at a glance, instead of that answer being scattered across chats and memory.
+
+👉 **Sign up at [linear.app/signup](https://linear.app/signup)** and choose the **free plan** — it covers everything this project needs.
+
+### 4. Neon — where the numbers live
+
+Neon gives you a real Postgres database without having to manage a server. It's where structured, ongoing numbers get tracked — the kind of thing a spreadsheet or a doc starts to strain under once it accumulates over time.
+
+👉 **Sign up at [console.neon.tech/signup](https://console.neon.tech/signup)** — free tier, **no credit card required**.
+
+*Advanced option, most people can skip this:* Neon is also [open source](https://github.com/neondatabase/neon) and can be self-hosted instead of using Neon's cloud service — worth knowing about if data residency, compliance, or avoiding a third-party vendor matters for your use case. Be honest with yourself about this one, though: self-hosting means building and running Neon's own storage engine (separate components called a Pageserver, Safekeepers, and compute nodes), not just running a single Docker container. It's a real infrastructure undertaking, not a beginner path — the signup link above is the right choice for almost everyone following this guide.
+
+---
+
+Once you have all four accounts, you're ready to clone this repo and follow the setup steps below. If you get stuck on any single step, each service above has its own help docs linked from its sign-up page — this guide only covers the "why," not every click of the "how."
+
+## Connecting Claude to Linear, Neon, and GitHub
+
+Having the four accounts isn't the same as having them talk to each other. This is the step that actually makes the pitch real — and Linear, Neon, and GitHub each connect a little differently, so it's worth knowing which is which before you start.
+
+### Linear: a one-click directory connector
+
+Linear is a native connector — Anthropic and Linear have already done the setup work, so it's just a search-and-click:
+
+1. In Claude, click the **"+" button** in the lower-left of the chat box (or type **/**), then choose **Connectors → Browse connectors**
+2. Search for **Linear**, click **Connect**, and sign in to authorize it
+
+### Neon: a custom connector (one extra step, still simple)
+
+Neon isn't in Claude's built-in directory the same way Linear is — you add it as a **custom connector**, which just means pasting in Neon's server address instead of finding it in a search list:
+
+1. Go to **Customize → Connectors** in Claude settings
+2. Click the **"+"**, then choose **Add custom connector**
+3. In the **Name** field, enter `Neon`. In the **Remote MCP server URL** field, enter `https://mcp.neon.tech/mcp`
+4. Click **Add**, then follow the browser prompt to sign in and authorize it
+
+That's it either way — from then on, in any conversation, Claude can read and write issues in Linear and query/update your Neon database directly, without you copying anything back and forth. (This is exactly the mechanism behind everything in this project's own Linear workspace — every issue, milestone, and document was created this way.) One note if you're on Claude's free plan: custom connectors are limited to one at a time on that plan, which is no problem here since Neon is the only one this project needs.
+
+### GitHub: needs Claude Code, not the regular chat connector
+
+This is the nuance worth knowing up front: the GitHub connector available in regular Claude chat is **read-only** — it lets Claude reference files from a repo you already have, but it can't create a repo or push changes. To actually have Claude create and manage a repo, you need **Claude Code** (Anthropic's coding tool) — and the easiest version needs no local installation:
+
+1. **Create an empty repository first.** Go to [github.com/new](https://github.com/new), give it a name, choose **Public** or **Private** (see guidance above), and click **Create repository**. Leave it empty — don't add a README yet.
+2. **Go to [claude.ai/code](https://claude.ai/code)** (or the **Code** tab in the Claude mobile app) and sign in.
+3. When prompted, **connect your GitHub account** — this installs the "Claude" GitHub App and asks which repositories to grant it access to. Select the one you just created (or all repos, if you'll use this often).
+4. **Pick that repository** from the repository selector.
+5. Type what you want done — e.g. *"Set up this repo with a README, a /diagrams folder, and an MIT license"* — and press enter.
+6. Claude works in an isolated cloud environment (nothing runs on your computer), then pushes a branch and opens a pull request for you to review.
+
+**If you have the Claude Desktop app installed, there's a second door to the same room — worth knowing so you don't get tripped up.** Desktop has its own **Code** tab, and clicking it also gets you Claude Code. When you click the environment selector (it starts on **Local**), you'll see several options in the menu — this is the part worth reading carefully, because two of them sound similar but do very different things:
+
+- **Cloud** (look for **"+ Add cloud environment..."**) — this is the one that matches the no-install steps above. It runs in Anthropic's hosted infrastructure, the same as claude.ai/code.
+- **Remote Control** — despite the similar name, this is *not* the cloud option. It connects to a session already running on **your own machine**, and requires installing Claude Code locally first (`claude rc`). It's a legitimate feature, just not the one this guide is describing.
+- **Local** / **SSH** — also run on a machine (yours, or one you manage), not Anthropic's cloud.
+
+To match the no-install path, choose **Cloud → Add cloud environment**. If you pick anything else, Claude will use an actual machine's git setup (yours or one you specify) rather than staying entirely off your computer.
+
+**Creating the environment and picking your repository are two separate steps — don't expect one to trigger the other.** After you click "Add cloud environment," a form appears asking for a name, network access, environment variables, and a setup script. For a task like this (just creating files, no build step), leave everything blank except a name you'll recognize, and click **Create environment**. This does *not* automatically ask you to pick a repository — once the environment exists, you'll see it appear as a small pill near the message box at the bottom (e.g. showing your environment's name), sitting next to a separate **"+ Select repo..."** button. Click that button specifically, and choose your repository from the list (authorizing GitHub here too, if you haven't already). Only once both the environment *and* the repo are selected are you ready to type or paste anything into the message box.
+
+**One thing worth knowing before you start:** Claude Code on the web is currently a research preview available on Claude's **Pro, Max, and Team** plans — it isn't included on the free plan. If you're on the free plan, you have two options: upgrade for this step, or skip Claude Code entirely and create the files by hand through GitHub's own web interface (the **Add file** button on a repo page) using content Claude gives you in chat. It's more manual, but costs nothing extra.
+
+**This repo already includes an `.mcp.json` file that connects Claude Code to Linear too** — not just GitHub. The first time a Claude Code session in this repo tries to use it, you'll be prompted to authorize it (same one-time OAuth flow as connecting Linear in regular chat). Once that's done, Claude Code can read a Linear issue directly — including checking out the matching git branch automatically, since Linear issues carry their branch name — rather than needing someone to copy the issue's contents into a prompt by hand.
+
+## Keeping Chat and Code honest with each other
+
+Here's the pattern this project actually uses, and it's worth understanding even if you never touch a line of code yourself: **Claude Chat is where a directive starts, Claude Code is where it gets executed, and neither one should be the last word on its own.**
+
+A simple loop that works well:
+
+1. **Chat produces the directive** — a Linear issue, a written spec, a clear ask. This is the source of truth for *what's supposed to happen*.
+2. **Code executes it** — reads the issue (directly, now that Linear is connected — see above), does the work, opens a pull request.
+3. **A human looks at the diff** — Claude Code's interfaces (web and Desktop) show a visual diff of every file changed. This step doesn't disappear just because an AI did the work; it's the same reason human engineers review each other's pull requests.
+4. **Bring the result back to Chat before merging.** Paste the PR link, or a summary of what changed, into the same Chat conversation that produced the original directive, and ask something like: *"Does this match what \[issue ID\] asked for? Anything added that wasn't requested, or anything missing?"* Chat has the full context of the original intent and can catch drift that's easy to miss when you're the one who just wrote the code — the same reason a second reviewer catches things the author doesn't.
+5. **Log what you find.** If Chat flags something, add it as a comment on the PR or the Linear issue — not just in the chat window — so the next person (or the next session) has the paper trail, not just your memory of the conversation.
+
+This isn't about distrusting Claude Code specifically — it's the same discipline you'd want between any two collaborators, human or AI, where one writes a spec and another implements it. The point of connecting Chat, Code, Linear, and GitHub together isn't to remove the review step; it's to make that review fast and grounded in a real record, instead of scattered across screenshots and memory.
+
+## Understanding Linear (for non-technical readers)
+
+Linear organizes work in a simple hierarchy, from biggest to smallest:
+
+- A **Team** is the group doing the work — pick a name for whoever's building this (your company, your side project, whatever fits). It's the organizational home, and it doesn't need to match the product name.
+- Inside a Team, a **Project** is one bounded initiative with a clear goal (this project's Linear Project is called `Claude, Built In` — matching the product name, so it's easy to find).
+- Inside a Project, **Milestones** are the phases of that goal (`Phase 0 — Setup`, `Phase 1 — Content`, `Phase 2 — Repo & Infra`, `Phase 3 — Distribution`). Each milestone shows a live completion percentage.
+- Inside each Milestone, **Issues** are the individual tasks (e.g. "Write the README").
+
+If you're setting this up yourself: create a Team, create a Project inside it, add Milestones for your phases, then add Issues and assign each one to a Milestone. That's the whole model — everything else in Linear is a view onto this same hierarchy.
+
+## Connecting Linear and GitHub
+
+This project keeps its plan in Linear and its code in GitHub — connecting them means an update in one shows up in the other automatically, instead of someone having to copy status back and forth by hand.
+
+**One-time setup for the Team (an admin does this once):**
+1. In Linear, go to **Settings → Features → Integrations → GitHub**
+2. Click **Enable**, choose your GitHub organization, and pick which repositories to connect
+3. That's it — pull requests and commits can now link to Linear issues
+
+**One-time setup for each person working in the repo:**
+- Go to **Settings → Connected accounts** in Linear and connect your personal GitHub account. Without this, your GitHub activity still syncs, but it shows up generically instead of attributed to you.
+
+**Day-to-day, once it's connected:**
+- Mention an issue ID in a pull request (e.g. "Fixes SAA-5") and Linear will link the two and move the issue to "In Progress" when the PR opens, "Done" when it merges — no manual status updates needed.
+
+Full reference: [linear.app/docs/github](https://linear.app/docs/github).
+
+## Where does this stuff live?
+
+This project uses three different places to hold information, and it's worth knowing why something ends up in one over another:
+
+| | **Claude's project knowledge** | **A Linear Document** | **A file in this repo** |
+|---|---|---|---|
+| Who can see it | Just Claude, so it stays grounded across conversations | Anyone with access to the Linear workspace | Anyone, publicly, no account needed |
+| What it's for | Reference material Claude re-reads so it doesn't drift from the original pitch (the deck, the diagrams) | Working drafts, decision rationale, discussion that's still in progress | The finished, versioned thing itself |
+| Best used for | Source-of-truth content Claude needs repeatedly | "Here's the proposal, here's the debate, here's why we landed here" | "Here's the thing itself, ready to clone and use" |
+
+**Rule of thumb:** if it's *how we decided something*, it belongs in a Linear Document, attached to the relevant issue. If it's *the thing we decided on*, it belongs in this repo. Claude's project knowledge is really just Claude's own memory aid — it's not somewhere a person on the team or a stranger cloning this repo would ever look.
+
+**A little redundancy between Linear and GitHub is normal, not a mistake.** For example: the reasoning behind this project's Neon schema (why no user accounts, why certain fields are free text instead of fixed categories) lives as a Linear Document attached to its issue, so the team can comment and challenge it. The actual schema — the SQL anyone would run to stand up their own copy — lives in this repo, at `/db/schema.sql`. The Linear doc is the paper trail; the repo file is the deliverable. Once something is genuinely settled, the Linear side usually shrinks down to a link and a short "why," rather than carrying the full content twice forever.
+
+## A note on naming
+
+The same name is used deliberately across the Claude project and the Linear project (`Claude, Built In`) — so that whichever one you land on first, you can find the others. This repo's own name is a variant of the same name, adjusted to fit GitHub's naming rules and to sit under its own organization rather than one branded around Claude itself. The Linear **Team** hosting this project is a separate, org-level name — think of it as the company or workspace name, not the product name. If you fork this kit for your own project, it's worth picking one consistent name for the product itself up front, rather than letting each tool drift to its own label — it's a small thing, but it's the difference between "I know exactly where to look" and "which of these three things is the real one?"
+
+## License
+
+MIT — see [`LICENSE`](./LICENSE). Fork it, use it, change it.
