@@ -2,7 +2,7 @@
 
 **Most projects only ever give Claude a chat window. This is a starter kit for giving it a home instead — a place to keep the plan, a place to do the work, and a place to remember what happened.**
 
-![Why Claude belongs in every project](diagrams/diagram-1-why-claude-belongs.svg)
+![Why Claude belongs in every project](diagrams/diagram1.png)
 
 Connected that way, Claude can keep a plan on track, do the actual work (docs, files, updates), and hold a live record of what happened — all through tools you can set up for free.
 
@@ -30,8 +30,8 @@ See `/deck` for the full pitch deck and `/diagrams` for the visual walkthrough t
 
 ```
 /README.md         — this file
-/diagrams           — the four diagrams behind the pitch (SVG)
-/deck                — the full pitch deck (.pptx source, plus a .pdf for viewing directly in GitHub)
+/diagrams           — the four diagrams behind the pitch (PNG)
+/deck                — the full pitch deck (.pdf)
 /db/schema.sql   — the Neon schema used by this project's own engagement tracking
 /LICENSE            — MIT
 ```
