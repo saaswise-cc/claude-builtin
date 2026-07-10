@@ -22,6 +22,7 @@ Prefer to read the full walkthrough yourself, at your own pace, instead? Everyth
 
 - **Chat and Code were never meant to work alone.** Both can reach a project's plan, its files, and its data — through connectors and CLIs most people already have access to, not special setup.
 - **If it has a goal, a deadline, and more than one moving part, it's already a project.** The only question is whether Claude knows about it yet.
+- **Starting something new — and setting its pace — is still your call.** Claude can scaffold the plan, write the docs, and flag what's ready to move once a project exists. But kicking one off, and deciding when it actually moves forward, depends on things Claude usually can't see. It waits for you to say "let's do this" — and for you to say "now."
 - **This isn't for everything.** If the work is simple and short-lived, a doc or a Notion page is still the right call. This is for work that recurs and accumulates decisions over time.
 
 Here's what that looks like as a real example, not just an abstraction:
@@ -45,21 +46,29 @@ See `/deck` for the full pitch deck and `/diagrams` for the rest of the visual w
 ## The full written walkthrough
 
 <details>
-<summary><strong>Getting Started — four accounts, in order</strong></summary>
+<summary><strong>Getting Started — the Claude Project first, then four accounts</strong></summary>
 
 You don't need to know how to code to follow this. You don't even need to have used Claude, GitHub, Linear, or a database before — this section assumes you haven't.
 
 The short version of what you're building: instead of Claude living only in a chat window, you're giving it a **place to keep the plan** (Linear), **a place to do the work** (GitHub), and **a place to remember what happened** (a database, via Neon). Once those three exist, Claude can read and write to all of them directly — so a plan doesn't drift out of sync with the work, and the work doesn't drift out of sync with the record.
 
-That means four accounts, created in this order:
+Getting there takes one Project to set up and four accounts to create — in this order:
 
-### 1. Claude — the assistant that does the work
+### 1. Set up your Claude Project — start here
+
+Before wiring up any accounts, set up the thing that ties them all together: a **Claude Project**. A Project in Claude is a persistent workspace with its own **instructions** (rules Claude follows in every chat) and **knowledge** (reference material it re-reads) — so Claude doesn't start from a blank slate each time.
+
+This kit ships those instructions ready to use: **[`project-template/claude-project-instructions.md`](project-template/claude-project-instructions.md)**. It encodes the operating agreement itself — which tool owns what, how Chat and Code divide the work, the review loop, and where a human stays in the loop — not just how to connect things.
+
+To set it up: create a new Project in Claude, then paste the contents of that template into the Project's **instructions**. (No Claude account yet? Create one first — that's the very next step — then come back here.) From then on, every chat inside that Project starts already knowing how this is meant to work.
+
+### 2. Claude — the assistant that does the work
 
 Claude is Anthropic's AI assistant. In this setup, Claude is the one actually writing the docs, filing the issues, and keeping things updated — not just answering questions in a chat window.
 
 👉 **Sign up at [claude.ai](https://claude.ai)** (free to start).
 
-### 2. GitHub — where the code, diagrams, and history live
+### 3. GitHub — where the code, diagrams, and history live
 
 GitHub hosts this project's code, diagrams, and a full history of every change anyone's ever made to it. If you've never used it, think of it as a shared, permanent, undoable-by-nobody filing cabinet.
 
@@ -71,13 +80,13 @@ This starter kit itself is public: the whole point is for strangers to be able t
 
 A rough rule: if you'd be comfortable with a stranger reading every file and every commit message, public is fine. If there's anything in there you wouldn't want a competitor, a client, or the internet at large to see — company names, credentials, internal numbers, unreleased plans — keep it private.
 
-### 3. Linear — where the plan lives
+### 4. Linear — where the plan lives
 
 Linear holds the project overview and the list of things left to do (called "issues"). It's the answer to "what are we working on and what's left" at a glance, instead of that answer being scattered across chats and memory.
 
 👉 **Sign up at [linear.app/signup](https://linear.app/signup)** and choose the **free plan** — it covers everything this project needs.
 
-### 4. Neon — where the numbers live
+### 5. Neon — where the numbers live
 
 Neon gives you a real Postgres database without having to manage a server. It's where structured, ongoing numbers get tracked — the kind of thing a spreadsheet or a doc starts to strain under once it accumulates over time.
 
@@ -114,7 +123,7 @@ That's it either way — from then on, in any conversation, Claude can read and 
 
 ### GitHub: needs Claude Code, not the regular chat connector
 
-This is the nuance worth knowing up front: the GitHub connector available in regular Claude chat is **read-only** — it lets Claude reference files from a repo you already have, but it can't create a repo or push changes. To actually have Claude create and manage a repo, you need **Claude Code** (Anthropic's coding tool) — and the easiest version needs no local installation:
+This is the nuance worth knowing up front: the GitHub connector available in regular Claude chat is **read-only** — it lets Claude reference files from a repo you already have, but it can't create a repo or push changes. Worth knowing: even reading a private repo through this chat connector can be unreliable — reports show it failing intermittently even when properly authorized. If Claude in chat seems to be missing something from your repo that you know is there, that's likely why — Claude Code doesn't have this problem. To actually have Claude create and manage a repo, you need **Claude Code** (Anthropic's coding tool) — and the easiest version needs no local installation:
 
 1. **Create an empty repository first.** Go to [github.com/new](https://github.com/new), give it a name, choose **Public** or **Private** (see guidance above), and click **Create repository**. Leave it empty — don't add a README yet.
 2. **Go to [claude.ai/code](https://claude.ai/code)** (or the **Code** tab in the Claude mobile app) and sign in.
