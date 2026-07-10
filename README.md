@@ -18,7 +18,7 @@ This repo is public, so Claude can read it directly and walk you through account
 
 Prefer to read the full walkthrough yourself, at your own pace, instead? Everything below covers the same ground in writing — click any section to expand it.
 
-## The pitch, in short
+## The value, in short
 
 - **Chat and Code were never meant to work alone.** Both can reach a project's plan, its files, and its data — through connectors and CLIs most people already have access to, not special setup.
 - **If it has a goal, a deadline, and more than one moving part, it's already a project.** The only question is whether Claude knows about it yet.
@@ -29,14 +29,14 @@ Here's what that looks like as a real example, not just an abstraction:
 
 ![One ordinary project, walked end to end](diagrams/diagram3.png)
 
-See `/deck` for the full pitch deck and `/diagrams` for the rest of the visual walkthrough this argument is built on.
+See `/deck` for the full deck and `/diagrams` for the rest of the visual walkthrough this argument is built on.
 
 ## What's in this repo
 
 ```
 /README.md         — this file
-/diagrams           — the four diagrams behind the pitch (PNG)
-/deck                — the full pitch deck (.pdf)
+/diagrams           — the four diagrams behind the framework (PNG)
+/deck                — the full deck (.pdf)
 /db/schema.sql   — the Neon schema used by this project's own engagement tracking
 /LICENSE            — MIT
 ```
@@ -101,7 +101,7 @@ Once you have all four accounts, each service above has its own help docs linked
 <details>
 <summary><strong>Connecting Claude to Linear, Neon, and GitHub</strong></summary>
 
-Having the four accounts isn't the same as having them talk to each other. This is the step that actually makes the pitch real — and Linear, Neon, and GitHub each connect a little differently, so it's worth knowing which is which before you start.
+Having the four accounts isn't the same as having them talk to each other. This is the step that actually makes the value real — and Linear, Neon, and GitHub each connect a little differently, so it's worth knowing which is which before you start.
 
 ### Linear: a one-click directory connector
 
@@ -132,6 +132,8 @@ This is the nuance worth knowing up front: the GitHub connector available in reg
 5. **Pick that repository** from the repository selector back in Claude.
 6. Type what you want done and press enter — Claude works in an isolated cloud environment (nothing runs on your computer), then pushes a branch or commits directly, depending on what you tell it.
 
+**One more setup tip:** the Claude GitHub App can push commits and merge pull requests, but it can't delete branches — that's a GitHub permission it doesn't have. Turn on **Settings → General → "Automatically delete head branches"** in your new repo now, so merged branches clean themselves up instead of piling up for manual deletion later.
+
 **If you're not the owner of the GitHub organization your repo lives in,** you won't be able to complete the install yourself — and the error you'll hit won't necessarily say that clearly. Instead of guessing, go to your Claude **Organization settings → Claude Code → GitHub**. If the connection isn't set up yet, that page has a "Not a GitHub account owner?" section with a ready-made message and direct link to send to whoever *is* the GitHub org owner — they'll also need to be an admin on your Claude workspace.
 
 **To check whether the connection actually worked,** go back to that same **Organization settings → Claude Code → GitHub** page. A successful install shows your organization listed under "Installations" with a status of **Active** and a "Synced from GitHub" timestamp.
@@ -149,6 +151,16 @@ To match the no-install path, choose **Cloud → Add cloud environment**.
 **One thing worth knowing before you start:** Claude Code on the web is currently a research preview available on Claude's **Pro, Max, and Team** plans — it isn't included on the free plan. If you're on the free plan, you can skip Claude Code entirely and create files by hand through GitHub's own **Add file** button, using content Claude gives you in chat.
 
 **This repo already includes an `.mcp.json` file that connects Claude Code to Linear too** — not just GitHub. The first time a Claude Code session in this repo tries to use it, you'll be prompted to authorize it. Once that's done, Claude Code can read a Linear issue directly — including checking out the matching git branch automatically, since Linear issues carry their branch name.
+
+### Getting notified
+
+You don't have to keep checking Linear yourself to know what's happening. There are three separate ways to get pinged, and they do different things — worth knowing which is which rather than assuming one covers it all:
+
+- **Project-level Slack channel** — a Linear Project's own Properties panel has a "Slack" field. Point it at a channel and that whole project's activity posts there automatically. One setup, benefits everyone on the team.
+- **Your own personal notifications** — at **Settings → Account → Notifications** in Linear, you choose what you get pinged about (Desktop, Mobile, Email, Slack). This is per-person — everyone sets their own — and it isn't reachable through Linear's API, so it's not something Claude can set up on your behalf.
+- **Slack → issue creation** — a separate integration: turning a Slack message into a new Linear issue. Different feature from the two above.
+
+Full details: [linear.app/docs/notifications](https://linear.app/docs/notifications)
 
 </details>
 
@@ -213,7 +225,7 @@ This project uses three different places to hold information, and it's worth kno
 | | **Claude's project knowledge** | **A Linear Document** | **A file in this repo** |
 |---|---|---|---|
 | Who can see it | Just Claude, so it stays grounded across conversations | Anyone with access to the Linear workspace | Anyone, publicly, no account needed |
-| What it's for | Reference material Claude re-reads so it doesn't drift from the original pitch | Working drafts, decision rationale, discussion still in progress | The finished, versioned thing itself |
+| What it's for | Reference material Claude re-reads so it doesn't drift from the original framework | Working drafts, decision rationale, discussion still in progress | The finished, versioned thing itself |
 | Best used for | Source-of-truth content Claude needs repeatedly | "Here's the proposal, here's the debate, here's why we landed here" | "Here's the thing itself, ready to clone and use" |
 
 **Rule of thumb:** if it's *how we decided something*, it belongs in a Linear Document. If it's *the thing we decided on*, it belongs in this repo.
