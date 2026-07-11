@@ -8,7 +8,8 @@
 
 | | |
 |---|---|
-| **[Claude (chat)](https://claude.ai) & [Claude Code](https://claude.ai/code)** | The assistant — plans, writes docs, creates and edits files, keeps the project moving |
+| **[Claude Chat](https://claude.ai)** | The assistant's home base. Set up as a Project so it remembers this setup and doesn't start from scratch each time — ask questions, update Linear, get charts and reports rendered right in the conversation. |
+| **[Claude Code](https://claude.ai/code)** | The only reliable way to actually write to the repo. Requires at least a Pro subscription — no free tier. |
 | **[GitHub](https://github.com)** | Where code, diagrams, and file history live |
 | **[Linear](https://linear.app)** | Where the plan lives — milestones, issues, what's done and what's left |
 | **[Neon](https://neon.com)** | Where structured data lives — the numbers a project accumulates over time |
@@ -19,7 +20,11 @@ This repo is itself the working example: this GitHub repo is public, and you're 
 
 ## The fastest way to start: just ask Claude
 
-You don't need to read anything else on this page first. Go to [claude.ai](https://claude.ai), start a new chat, and paste this:
+Not sure yet whether this is worth setting up? Paste this into a chat with Claude first:
+
+> Take a look at github.com/saaswise-cc/claude-builtin — in plain terms, what would this actually help me do, and why should I care? Ask me a question or two about the kind of work I do if that'll help you give a real answer, and be honest if you don't think it'd be useful for me.
+
+Ready to actually build it? You don't need to read anything else on this page first — go to [claude.ai](https://claude.ai), start a new chat, and paste this instead:
 
 > I want to set up the "Claude, Built In" starter kit from github.com/saaswise-cc/claude-builtin. I've never used Claude, GitHub, Linear, or Neon before — walk me through it step by step, starting with whatever comes first, and adjust as we go based on what I already have set up.
 
@@ -70,6 +75,15 @@ Before wiring up any accounts, set up the thing that ties them all together: a *
 This kit ships those instructions ready to use: **[`project-template/claude-project-instructions.md`](project-template/claude-project-instructions.md)**. It encodes the operating agreement itself — which tool owns what, how Chat and Code divide the work, the review loop, and where a human stays in the loop — not just how to connect things.
 
 To set it up: create a new Project in Claude, then paste the contents of that template into the Project's **instructions**. (No Claude account yet? Create one first — that's the very next step — then come back here.) From then on, every chat inside that Project starts already knowing how this is meant to work.
+
+**Why not just use Claude Code for everything?** You technically could — Code can hold standing instructions via a CLAUDE.md file and can connect to Linear and Neon too. But it's worth knowing what that actually costs before deciding:
+
+- **Claude Code has no free tier at all** — Pro minimum, even for light use. Chat + a Project works on the free plan.
+- **Code is genuinely pricier per casual question** — every turn reloads its system prompt, your CLAUDE.md, and any connected MCP server's tool schemas before your question even starts.
+- **You lose inline charts and reports** — Chat renders these directly; Code would have to write a file to the repo instead.
+- **Projects keep multiple efforts organized** — a simple switcher, versus juggling separate repo checkouts.
+
+None of this makes Code a bad tool — it's the only reliable way to write to the repo, and essential for that. It's just not a substitute for also having a Project. They're meant to work together, not as alternatives.
 
 ### 2. Claude — the assistant that does the work
 
