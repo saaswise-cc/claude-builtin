@@ -2,7 +2,7 @@
 
 **Most projects only ever give Claude a chat window. This is a starter kit for giving it a home instead — a place to keep the plan, a place to do the work, and a place to remember what happened.**
 
-![Why Claude belongs in every project](diagrams/diagram1.png)
+<img src="diagrams/diagram1.png" alt="Why Claude belongs in every project" width="700">
 
 ## What's involved
 
@@ -36,17 +36,17 @@ Prefer to read the full walkthrough yourself, at your own pace, instead? Everyth
 
 - **Chat and Code were never meant to work alone.** Both can reach a project's plan, its files, and its data — through connectors and CLIs most people already have access to, not special setup.
 
-  ![Claude Chat, Code, and Skills connected to Linear, Git, and a database through MCP and CLIs, not siloed to one](diagrams/diagram2.png)
+  <img src="diagrams/diagram2.png" alt="Claude Chat, Code, and Skills connected to Linear, Git, and a database through MCP and CLIs, not siloed to one" width="700">
 
 - **If it has a goal, a deadline, and more than one moving part, it's already a project.** The only question is whether Claude knows about it yet.
 - **Starting something new — and setting its pace — is still your call.** Claude can scaffold the plan, write the docs, and flag what's ready to move once a project exists. But kicking one off, and deciding when it actually moves forward, depends on things Claude usually can't see. It waits for you to say "let's do this" — and for you to say "now."
 - **This isn't for everything.** If the work is simple and short-lived, a doc or a Notion page is still the right call. This is for work that recurs and accumulates decisions over time.
 
-  ![When Linear, Git, and a database beat Notion — and when Notion is still the right call](diagrams/diagram4.png)
+  <img src="diagrams/diagram4.png" alt="When Linear, Git, and a database beat Notion — and when Notion is still the right call" width="700">
 
 Here's what that looks like as a real example, not just an abstraction:
 
-![One ordinary project, walked end to end](diagrams/diagram3.png)
+<img src="diagrams/diagram3.png" alt="One ordinary project, walked end to end" width="700">
 
 See `/deck` for the full deck and `/diagrams` for the rest of the visual walkthrough this argument is built on.
 
