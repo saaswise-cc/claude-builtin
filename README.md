@@ -4,15 +4,24 @@
 
 ![Why Claude belongs in every project](diagrams/diagram1.png)
 
-Connected that way, Claude can keep a plan on track, do the actual work (docs, files, updates), and hold a live record of what happened — all through tools you can set up for free.
+## What's involved
 
-This repo is itself the working example: the [Linear project](https://linear.app) tracking this kit's own build-out, this GitHub repo, and a Neon database are the real thing, not a mockup.
+| | |
+|---|---|
+| **Claude (chat) & Claude Code** | The assistant — plans, writes docs, creates and edits files, keeps the project moving |
+| **GitHub** | Where code, diagrams, and file history live |
+| **Linear** | Where the plan lives — milestones, issues, what's done and what's left |
+| **Neon** | Where structured data lives — the numbers a project accumulates over time |
+
+Connected that way, Claude can keep a plan on track, do the actual work (docs, files, updates), and hold a live record of what happened. GitHub, Linear, and Neon are free to use for this. Claude's Projects feature is on the free plan too — though Project Instructions, which this kit's whole approach depends on, may require a paid Claude plan. Anthropic's own documentation isn't fully consistent on this point, so it's worth checking your account directly rather than trusting this page either way.
+
+This repo is itself the working example: this GitHub repo is public, and you're already looking at it. The [Linear project](https://linear.app) tracking this kit's own build-out, and the Neon database behind the Offsites example, are real too — just not something we can link you into directly, since Linear and Neon don't offer public read-only views the way GitHub does.
 
 ## The fastest way to start: just ask Claude
 
 You don't need to read anything else on this page first. Go to [claude.ai](https://claude.ai), start a new chat, and paste this:
 
-> I want to set up the "Claude, Built In" starter kit from github.com/saaswise-cc/claude-builtin. I've never used Claude, GitHub, Linear, or a database before — walk me through it step by step, starting with whatever comes first, and adjust as we go based on what I already have set up.
+> I want to set up the "Claude, Built In" starter kit from github.com/saaswise-cc/claude-builtin. I've never used Claude, GitHub, Linear, or Neon before — walk me through it step by step, starting with whatever comes first, and adjust as we go based on what I already have set up.
 
 This repo is public, so Claude can read it directly and walk you through account creation, connecting the tools, and building your own version conversationally — asking what you need instead of you having to parse a long document alone. That's not a gimmick to shorten this page; it's the actual point of the project.
 
