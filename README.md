@@ -1,6 +1,6 @@
 # Claude, Built In
 
-**Most projects only ever give Claude a chat window. This is a starter kit for giving it a home instead — a place to keep the plan, a place to do the work, and a place to remember what happened.**
+**The best operators are about to run far more projects — with far more people in them — than they ever could before, and get there faster and with fewer mistakes. That depends on which tools Claude has, not just that it has some: a real issue tracker, real version history, and a real database working together do something a Notion page and a spreadsheet can't. This is the starter kit for that combination — giving Claude a real home in every project, not just a chat window.**
 
 <img src="diagrams/diagram1.png" alt="Why Claude belongs in every project" width="700">
 
@@ -39,6 +39,7 @@ Prefer to read the full walkthrough yourself, at your own pace, instead? Everyth
   <img src="diagrams/diagram2.png" alt="Claude Chat, Code, and Skills connected to Linear, Git, and a database through MCP and CLIs, not siloed to one" width="700">
 
 - **If it has a goal, a deadline, and more than one moving part, it's already a project.** The only question is whether Claude knows about it yet.
+- **The tools you connect it to aren't interchangeable.** Notion and a spreadsheet can hold information, but they can't give Claude a real issue tracker's state machine, real version history to diff against, or a real database to query and grow over time. Structured interfaces mean fewer mistakes and faster answers — not just a different place to write things down.
 - **Starting something new — and setting its pace — is still your call.** Claude can scaffold the plan, write the docs, and flag what's ready to move once a project exists. But kicking one off, and deciding when it actually moves forward, depends on things Claude usually can't see. It waits for you to say "let's do this" — and for you to say "now."
 - **This isn't for everything.** If the work is simple and short-lived, a doc or a Notion page is still the right call. This is for work that recurs and accumulates decisions over time.
 
