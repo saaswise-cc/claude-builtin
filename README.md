@@ -8,14 +8,14 @@
 
 | | |
 |---|---|
-| **Claude (chat) & Claude Code** | The assistant — plans, writes docs, creates and edits files, keeps the project moving |
-| **GitHub** | Where code, diagrams, and file history live |
-| **Linear** | Where the plan lives — milestones, issues, what's done and what's left |
-| **Neon** | Where structured data lives — the numbers a project accumulates over time |
+| **[Claude (chat)](https://claude.ai) & [Claude Code](https://claude.ai/code)** | The assistant — plans, writes docs, creates and edits files, keeps the project moving |
+| **[GitHub](https://github.com)** | Where code, diagrams, and file history live |
+| **[Linear](https://linear.app)** | Where the plan lives — milestones, issues, what's done and what's left |
+| **[Neon](https://neon.com)** | Where structured data lives — the numbers a project accumulates over time |
 
 Connected that way, Claude can keep a plan on track, do the actual work (docs, files, updates), and hold a live record of what happened. GitHub, Linear, and Neon are free to use for this. Claude's Projects feature is on the free plan too — though Project Instructions, which this kit's whole approach depends on, may require a paid Claude plan. Anthropic's own documentation isn't fully consistent on this point, so it's worth checking your account directly rather than trusting this page either way.
 
-This repo is itself the working example: this GitHub repo is public, and you're already looking at it. The [Linear project](https://linear.app) tracking this kit's own build-out, and the Neon database behind the Offsites example, are real too — just not something we can link you into directly, since Linear and Neon don't offer public read-only views the way GitHub does.
+This repo is itself the working example: this GitHub repo is public, and you're already looking at it. The Linear project tracking this kit's own build-out, and the Neon database behind the Offsites example, are real too — just not something we can link you into directly, since Linear and Neon don't offer public read-only views the way GitHub does.
 
 ## The fastest way to start: just ask Claude
 
