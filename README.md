@@ -35,9 +35,14 @@ Prefer to read the full walkthrough yourself, at your own pace, instead? Everyth
 ## The value, in short
 
 - **Chat and Code were never meant to work alone.** Both can reach a project's plan, its files, and its data — through connectors and CLIs most people already have access to, not special setup.
+
+  ![Claude Chat, Code, and Skills connected to Linear, Git, and a database through MCP and CLIs, not siloed to one](diagrams/diagram2.png)
+
 - **If it has a goal, a deadline, and more than one moving part, it's already a project.** The only question is whether Claude knows about it yet.
 - **Starting something new — and setting its pace — is still your call.** Claude can scaffold the plan, write the docs, and flag what's ready to move once a project exists. But kicking one off, and deciding when it actually moves forward, depends on things Claude usually can't see. It waits for you to say "let's do this" — and for you to say "now."
 - **This isn't for everything.** If the work is simple and short-lived, a doc or a Notion page is still the right call. This is for work that recurs and accumulates decisions over time.
+
+  ![When Linear, Git, and a database beat Notion — and when Notion is still the right call](diagrams/diagram4.png)
 
 Here's what that looks like as a real example, not just an abstraction:
 
@@ -78,7 +83,7 @@ To set it up: create a new Project in Claude, then paste the contents of that te
 
 **Why not just use Claude Code for everything?** You technically could — Code can hold standing instructions via a CLAUDE.md file and can connect to Linear and Neon too. But it's worth knowing what that actually costs before deciding:
 
-- **Claude Code has no free tier at all** — Pro minimum, even for light use. Chat + a Project works on the free plan.
+- **Claude Code has no free tier at all** — Pro minimum, even for light use. Chat is free to start, though Project Instructions specifically may not be (see the note above).
 - **Code is genuinely pricier per casual question** — every turn reloads its system prompt, your CLAUDE.md, and any connected MCP server's tool schemas before your question even starts.
 - **You lose inline charts and reports** — Chat renders these directly; Code would have to write a file to the repo instead.
 - **Projects keep multiple efforts organized** — a simple switcher, versus juggling separate repo checkouts.
@@ -171,7 +176,7 @@ To match the no-install path, choose **Cloud → Add cloud environment**.
 
 **Creating the environment and picking your repository are two separate steps — don't expect one to trigger the other.** After you click "Add cloud environment," a form appears asking for a name, network access, environment variables, and a setup script. For a task like this (just creating files, no build step), leave everything blank except a name you'll recognize, and click **Create environment**. This does *not* automatically ask you to pick a repository — once the environment exists, you'll see it appear as a small pill near the message box at the bottom, sitting next to a separate **"+ Select repo..."** button. Click that button specifically.
 
-**One thing worth knowing before you start:** Claude Code on the web is currently a research preview available on Claude's **Pro, Max, and Team** plans — it isn't included on the free plan. If you're on the free plan, you can skip Claude Code entirely and create files by hand through GitHub's own **Add file** button, using content Claude gives you in chat.
+**One thing worth knowing before you start:** Claude Code on the web is currently a research preview (see the plan note near the top of this page for which tiers include Code). If you're on the free plan, you can skip Claude Code entirely and create files by hand through GitHub's own **Add file** button, using content Claude gives you in chat.
 
 **This repo already includes an `.mcp.json` file that connects Claude Code to Linear too** — not just GitHub. The first time a Claude Code session in this repo tries to use it, you'll be prompted to authorize it. Once that's done, Claude Code can read a Linear issue directly — including checking out the matching git branch automatically, since Linear issues carry their branch name.
 
