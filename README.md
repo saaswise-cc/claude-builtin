@@ -152,7 +152,7 @@ That's it either way — from then on, in any conversation, Claude can read and 
 
 ### GitHub: needs Claude Code, not the regular chat connector
 
-This is the nuance worth knowing up front: the GitHub connector available in regular Claude chat is **read-only** — it lets Claude reference files from a repo you already have, but it can't create a repo or push changes. Also worth noting: even reading a private repo through this chat connector can be unreliable — reports show it failing intermittently even when properly authorized. If Claude in chat seems to be missing something from your repo that you know is there, that's likely why — Claude Code doesn't have this problem. To actually have Claude create and manage a repo, you need **Claude Code** (Anthropic's coding tool) — and the easiest version needs no local installation:
+This is the nuance worth knowing up front: the GitHub connector available in regular Claude chat is **read-only** — it lets Claude reference files from a repo you already have, but it can't create a repo or push changes. Also worth noting: even reading a private repo through this chat connector can be unreliable — reports show it failing intermittently even when properly authorized. If Claude in chat seems to be missing something from your repo that you know is there, that's likely why — Claude Code doesn't have this problem. To actually have Claude create and manage a repo, you need **Claude Code** (Anthropic's coding tool). (For the fuller picture on when to default to Chat versus Code day-to-day, see "Which surface should I be in?" further down.) Here's the easiest version, which needs no local installation:
 
 1. **Create an empty repository first.** Go to [github.com/new](https://github.com/new), give it a name, choose **Public** or **Private** (see guidance above), and click **Create repository**. Leave it empty — don't add a README yet.
 2. **Go to [claude.ai/code](https://claude.ai/code)** (or the **Code** tab in the Claude mobile app) and sign in.
@@ -208,7 +208,7 @@ A simple loop that works well:
 
 This isn't about distrusting Claude Code specifically — it's the same discipline you'd want between any two collaborators, human or AI, where one writes a spec and another implements it.
 
-**Do you need a pull request for every change?** Not always — for a solo first commit into an otherwise empty repo, pushing straight to the main branch is perfectly reasonable. But it's worth defaulting back to PRs once there's ongoing work: the Linear↔GitHub automation described below (an issue ID mentioned in a PR moving that issue to "In Progress" or "Done" automatically) is specifically PR-driven.
+**Do you need a pull request for every change?** Not always — for a solo first commit into an otherwise empty repo, pushing straight to the main branch is perfectly reasonable. But it's worth defaulting back to PRs once there's ongoing work: the Linear↔GitHub automation described below (an issue ID mentioned in a PR moving that issue to "In Progress" or "Done" automatically) is specifically PR-driven. For which surface you personally should default to day-to-day, and what extra discipline applies if you're mostly in Code, see "Which surface should I be in?" a bit further down.
 
 </details>
 
