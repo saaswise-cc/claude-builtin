@@ -30,6 +30,9 @@ Once the offsite is moving, Claude can flag what's ready and nudge on stalled it
 3. Say what changed and where (which issue, which file, which number) after doing anything.
 4. Rationale (why this venue, why this budget split) → a Linear comment or Document. The actual deliverable (the shortlist, the RSVP count) → the repo or Neon.
 
+**Neon writes need the same discipline as repo writes**
+Unlike GitHub, there's no PR or diff step enforced by the tool for database changes — so treat this as a rule, not a suggestion: any destructive change (DELETE, DROP, TRUNCATE, or an UPDATE without a WHERE clause) requires an explicit stop-and-confirm before running it, every time. For anything exploratory, prefer Neon's branching feature — create a branch, test changes there, and only apply to the branch that matters once it's reviewed. If you're Consumer-persona on this project (see "Which surface should I be in?" in the README) and only need to query the data, connect with a read-only Postgres role instead of one with write access — removes the risk rather than relying on care alone.
+
 ---
 
 ## Adapting this for your own project
@@ -58,6 +61,9 @@ Once something's moving, Claude can flag what's ready and nudge on stalled items
 2. Prefer small, targeted changes over full rewrites.
 3. Say what changed and where.
 4. Keep rationale (→ Linear Document) and deliverables (→ repo/database) separate.
+
+**Neon writes need the same discipline as repo writes**
+There's no PR or diff step enforced by the tool for database changes the way there is for the repo — so this needs to be an explicit rule, not just good judgment: any destructive change (DELETE, DROP, TRUNCATE, or an UPDATE without a WHERE clause) requires a stop-and-confirm before running it, every time. Prefer Neon's branching feature for anything exploratory — create a branch, test there, promote once reviewed. Anyone who's Consumer-persona on this project and only needs to query data should connect with a read-only role, not one with write access.
 
 **Getting notified**
 See [onboarding doc / notification setup guide] for getting updates sent to you instead of checking each tool yourself.
