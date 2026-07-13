@@ -2,6 +2,8 @@
 
 **The best operators are about to run far more projects — with far more people in them — than they ever could before, and get there faster and with fewer mistakes. That depends on which tools Claude has, not just that it has some: a real issue tracker, real version history, and a real database working together do something a Notion page and a spreadsheet can't. This is the starter kit for that combination — giving Claude a real home in every project, not just a chat window.**
 
+**Who this is for (a guess, not a gate):** probably the best fit is small or early-stage teams who can set this up quickly and don't have a pile of existing tooling to unwind first — but that's untested. If you're not that, this may still be worth five minutes; we just don't know yet.
+
 <img src="diagrams/diagram1.png" alt="Why Claude belongs in every project" width="700">
 
 ## What's involved
