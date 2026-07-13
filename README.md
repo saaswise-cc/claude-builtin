@@ -89,7 +89,7 @@ To set it up: create a new Project in Claude, then paste the contents of that te
 - **You lose inline charts and reports** — Chat renders these directly; Code would have to write a file to the repo instead.
 - **Projects keep multiple efforts organized** — a simple switcher, versus juggling separate repo checkouts.
 
-None of this makes Code a bad tool — it's the only reliable way to write to the repo, and essential for that. It's just not a substitute for also having a Project. They're meant to work together, not as alternatives.
+None of this makes Code a bad tool — it's the only reliable way to write to the repo, and essential for that. It's just not a substitute for also having a Project. They're meant to work together, not as alternatives. For the fuller picture — including which of you should default to which surface, and what extra discipline Code-primary work needs — see "Which surface should I be in?" further down.
 
 ### 2. Claude — the assistant that does the work
 
@@ -209,6 +209,44 @@ A simple loop that works well:
 This isn't about distrusting Claude Code specifically — it's the same discipline you'd want between any two collaborators, human or AI, where one writes a spec and another implements it.
 
 **Do you need a pull request for every change?** Not always — for a solo first commit into an otherwise empty repo, pushing straight to the main branch is perfectly reasonable. But it's worth defaulting back to PRs once there's ongoing work: the Linear↔GitHub automation described below (an issue ID mentioned in a PR moving that issue to "In Progress" or "Done" automatically) is specifically PR-driven.
+
+</details>
+
+<details>
+<summary><strong>Which surface should I be in?</strong></summary>
+
+Once you're working with both Chat and Code regularly, two more questions come up: which one should *you* default to, and if you're spending real time in Code, what extra discipline does that require?
+
+### The quick decision
+
+| Task | Use |
+|---|---|
+| Reading, planning, asking questions, updating Linear | Chat |
+| Reviewing status, getting a chart or report | Chat |
+| Creating or editing a file in the repo | Code |
+| Anything that needs a diff someone reviews before it ships | Code |
+
+### Which one should you default to?
+
+This isn't just about the task in front of you — it's about your role on a given project, and it's worth reassessing per project rather than treating as a fixed identity:
+
+- **Consumer** — asks questions, reviews status, comments on Linear issues, rarely if ever touches a file directly. Chat is the whole job.
+- **Builder** — regularly creates or edits files, writes docs or code that gets committed. Lives mostly in Code, dips into Chat for planning and review.
+
+The same person can be a Builder on one project and a Consumer on another.
+
+One thing worth stating clearly: if you're Builder/Code-primary, you don't get Chat's built-in habit of writing back to Linear for free. A Claude Project's instructions (like the ones in `project-template/claude-project-instructions.md`) treat "say what changed and where" as automatic — Code has no equivalent built-in nudge. That discipline has to be a deliberate habit, not something the tool does for you.
+
+### If you're Code-primary: two extra responsibilities
+
+1. **Keep the paper trail true.** After every session, log what changed — which issue, which file — as a Linear comment, not just left in Code's own session history, which nobody else can see.
+2. **Watch your spend.** Code has no free tier, and cost adds up faster than a casual chat question, for reasons worth knowing:
+   - **Agentic looping** — Code can iterate many turns autonomously; a vague ask can spiral into far more turns than expected.
+   - **Model selection** — not every task needs the most capable, most expensive model.
+   - **Context and compaction hygiene** — long sessions accumulate context that gets resent every turn; clearing or compacting periodically keeps costs down.
+   - **Subagent fan-out** — spinning up multiple subagents multiplies cost accordingly, worth understanding before it happens by default.
+
+None of this means avoid Code — it means treat it like the professional tool it is, not a chat replacement.
 
 </details>
 
