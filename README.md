@@ -54,11 +54,14 @@ See `/deck` for the full deck and `/diagrams` for the rest of the visual walkthr
 ## What's in this repo
 
 ```
-/README.md         — this file
-/diagrams           — the four diagrams behind the framework (PNG)
-/deck                — the full deck (.pdf)
-/db/schema.sql   — the Neon schema used by this project's own engagement tracking
-/LICENSE            — MIT
+/README.md              — this file
+/diagrams               — the four diagrams behind the framework (PNG)
+/deck                   — the full deck (.pdf)
+/db/schema.sql          — the Neon schema used by this project's own engagement tracking
+/project-template       — the Claude Project instructions template (see Step 1)
+/examples/offsites      — a fully worked example: real Linear structure, real schema, real data
+.mcp.json               — connects Claude Code to Linear automatically (see the GitHub section)
+/LICENSE                — MIT
 ```
 
 ---
@@ -69,6 +72,8 @@ See `/deck` for the full deck and `/diagrams` for the rest of the visual walkthr
 <summary><strong>Getting Started — the Claude Project first, then four accounts</strong></summary>
 
 You don't need to know how to code to follow this. You don't even need to have used Claude, GitHub, Linear, or a database before — this section assumes you haven't.
+
+One honest caveat: "you don't need to know how to code" describes *what you need to know*, not how simple the underlying setup is — GitHub App permissions, Claude Code's Cloud vs. Local distinction, and connector configuration are all genuinely intricate under the hood, as the rest of this guide shows in detail. The actual promise is that Claude walks you through that complexity conversationally, adapting to whatever you already have set up — not that the process itself is trivial.
 
 The short version of what you're building: instead of Claude living only in a chat window, you're giving it a **place to keep the plan** (Linear), **a place to do the work** (GitHub), and **a place to remember what happened** (a database, via Neon). Once those three exist, Claude can read and write to all of them directly — so a plan doesn't drift out of sync with the work, and the work doesn't drift out of sync with the record.
 
@@ -122,6 +127,8 @@ Neon gives you a real Postgres database without having to manage a server. It's 
 👉 **Sign up at [console.neon.tech/signup](https://console.neon.tech/signup)** — free tier, **no credit card required**.
 
 *Advanced option, most people can skip this:* Neon is also [open source](https://github.com/neondatabase/neon) and can be self-hosted instead of using Neon's cloud service — worth knowing about if data residency, compliance, or avoiding a third-party vendor matters for your use case. Be honest with yourself about this one, though: self-hosting means building and running Neon's own storage engine (separate components called a Pageserver, Safekeepers, and compute nodes), not just running a single Docker container. It's a real infrastructure undertaking, not a beginner path — the signup link above is the right choice for almost everyone following this guide.
+
+**A safety note, not just a setup note:** GitHub's workflow has a built-in review gate — nothing merges without a PR. Neon doesn't have an equivalent enforced by this kit, so it's worth deliberately building in: use Neon's own branching feature to test changes before they hit the branch that matters, and consider a read-only role for anyone who only needs to query data, not write it. The Claude Project instructions template treats destructive SQL as something that always needs an explicit confirm — worth keeping that rule even if you adapt everything else.
 
 Once you have all four accounts, each service above has its own help docs linked from its sign-up page if you get stuck on any single step — this guide only covers the "why," not every click of the "how."
 
